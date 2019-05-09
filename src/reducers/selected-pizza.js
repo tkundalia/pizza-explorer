@@ -1,7 +1,8 @@
 // 2nd reducer 
+
 const reducer = (state = null, action = {}) => {
   switch (action.type) {
-    
+
       case 'SELECT_PIZZA':
         return action.payload
 
@@ -9,5 +10,6 @@ const reducer = (state = null, action = {}) => {
         return state
       }
 }
+
 
 export default reducer

@@ -1,6 +1,5 @@
 //1st reducer file
 
-
 const initialState = [
   {
     id: 1,
