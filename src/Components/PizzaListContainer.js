@@ -30,8 +30,9 @@ const mapStateToProps = (state) => {
     type: 'SELECT_PIZZA',
     payload: id
   })
-}*/
-/*
+} 
+
+
 this.props.dispatch({
   type: 'SELECT_PIZZA',
   payload: id
