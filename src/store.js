@@ -1,6 +1,9 @@
 import { createStore } from 'redux'
-import reducer from './reducer'
 
-const store = createStore(reducer)
+import reducer from './reducers'    // which is shorthand for import ./reducers/index.js (eventually from reducers.js)
+const enhancer = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+
+const store = createStore(reducer, enhancer)        //reducer= state? enhancer=action?
 
 export default store
