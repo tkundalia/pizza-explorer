@@ -6,14 +6,22 @@ class PizzaListContainer extends React.Component {
   selectPizza(id) {
     console.log('selected pizza:', id)
     
+    //** */function for changes through props
+    selectPizza = (id) => {
+      this.props.dispatch({
+        type: 'SELECT_PIZZA',
+        payload: id
+      })
+    }
     
   }
 
   render() {
 
-    return <PizzaList pizzas={this.props.pizzas} selectPizza={this.selectPizza} />   //??
-
-  }
+    return (
+        <PizzaList pizzas={this.props.pizzas} selectPizza={this.selectPizza} />   
+        //** changes through props */
+    );
 }
 
 
@@ -21,23 +29,9 @@ class PizzaListContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     pizzas: state.pizzas
-    
+    selectedPizza: state.selectPizza
   }
 }
-
-/*selectPizza = (id) => {
-  this.props.dispatch({
-    type: 'SELECT_PIZZA',
-    payload: id
-  })
-} 
-
-
-this.props.dispatch({
-  type: 'SELECT_PIZZA',
-  payload: id
-})*/
-
 
 
 
